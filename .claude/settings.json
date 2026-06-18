@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(dir \"c:\\\\Projects\\\\CREDAI-AFR\\\\credai_afr_frontend\\\\project_md\\\\AFR\\\\\" /b | findstr \"056\\\\|057\\\\|055\\\\|054\")",
+      "PowerShell(Get-ChildItem \"c:\\\\Projects\\\\CREDAI-AFR\\\\credai_afr_frontend\\\\project_md\\\\AFR\\\\\" | Where-Object { $_.Name -match \"05[4-9]\" } | Select-Object Name)",
+      "Bash(python3 -c ' *)",
+      "Bash(Select-String -Pattern \"FirmDetailsSection|scrutinizerApplicationDetail\")",
+      "Bash(where claude *)",
+      "PowerShell(Get-Command claude -ErrorAction SilentlyContinue)",
+      "PowerShell(if \\(-not $?\\) { \"claude not found in PATH\" })",
+      "PowerShell(Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force)",
+      "Bash(claude --version)"
+    ]
+  }
+}
