@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Figma__get_metadata",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import sys; sys.stdout.buffer.write\\(sys.stdin.buffer.read\\(\\)\\)\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\Projects\\\\CREDAI-AFR\\\\credai_afr_frontend\\\\src\\\\features\" -Directory)",
+      "PowerShell($content = Get-Content 'C:\\\\Users\\\\apekshaarde\\\\.claude\\\\projects\\\\c--Projects-CREDAI-AFR-credai-afr-frontend\\\\9eda3c63-53e6-4db2-9a38-24b5e768bff4\\\\tool-results\\\\mcp-figma-get_design_context-1779952979335.txt' -Raw; $data = ConvertFrom-Json $content; foreach \\($item in $data\\) { if \\($item.type -eq 'text'\\) { Write-Output $item.text.Substring\\(0, [Math]::Min\\(4000, $item.text.Length\\)\\) } })",
+      "PowerShell($content = Get-Content 'C:\\\\Users\\\\apekshaarde\\\\.claude\\\\projects\\\\c--Projects-CREDAI-AFR-credai-afr-frontend\\\\9eda3c63-53e6-4db2-9a38-24b5e768bff4\\\\tool-results\\\\mcp-figma-get_design_context-1779952979335.txt' -Raw; $idx = $content.IndexOf\\('Table Row'\\); if \\($idx -ge 0\\) { Write-Output $content.Substring\\($idx, [Math]::Min\\(3000, $content.Length - $idx\\)\\) } else { Write-Output 'Not found - searching for row data...' ; $idx2 = $content.IndexOf\\('APP/'\\); if \\($idx2 -ge 0\\) { Write-Output $content.Substring\\($idx2, [Math]::Min\\(3000, $content.Length - $idx2\\)\\) } })",
+      "PowerShell($content = Get-Content 'C:\\\\Users\\\\apekshaarde\\\\.claude\\\\projects\\\\c--Projects-CREDAI-AFR-credai-afr-frontend\\\\9eda3c63-53e6-4db2-9a38-24b5e768bff4\\\\tool-results\\\\mcp-figma-get_design_context-1779952979335.txt' -Raw; $idx = $content.IndexOf\\('APP/2026/G78D92B1'\\); if \\($idx -ge 0\\) { Write-Output $content.Substring\\([Math]::Max\\(0,$idx-200\\), [Math]::Min\\(600, $content.Length - $idx + 200\\)\\) })",
+      "PowerShell($content = Get-Content 'C:\\\\Users\\\\apekshaarde\\\\.claude\\\\projects\\\\c--Projects-CREDAI-AFR-credai-afr-frontend\\\\9eda3c63-53e6-4db2-9a38-24b5e768bff4\\\\tool-results\\\\mcp-figma-get_design_context-1779952979335.txt' -Raw; $idx = $content.IndexOf\\('columnheader'\\); if \\($idx -ge 0\\) { Write-Output $content.Substring\\([Math]::Max\\(0,$idx-100\\), [Math]::Min\\(1500, $content.Length - $idx + 100\\)\\) } else { $idx2 = $content.IndexOf\\('Application Number'\\); Write-Output $content.Substring\\([Math]::Max\\(0,$idx2-100\\), [Math]::Min\\(800, $content.Length - $idx2 + 100\\)\\) })",
+      "PowerShell($content = Get-Content 'C:\\\\Users\\\\apekshaarde\\\\.claude\\\\projects\\\\c--Projects-CREDAI-AFR-credai-afr-frontend\\\\9eda3c63-53e6-4db2-9a38-24b5e768bff4\\\\tool-results\\\\mcp-figma-get_design_context-1779952979335.txt' -Raw; $idx = $content.IndexOf\\('Application Number'\\); Write-Output $content.Substring\\([Math]::Max\\(0,$idx-300\\), [Math]::Min\\(400, $content.Length - $idx + 100\\)\\))",
+      "Bash(curl -s -o \"C:\\\\Users\\\\apekshaarde\\\\AppData\\\\Local\\\\Temp\\\\figma_view1.png\" \"https://www.figma.com/api/mcp/asset/99ac921f-0fbb-49f7-acea-a784fecd5fc2\")",
+      "Bash(curl -s -o \"C:\\\\Users\\\\apekshaarde\\\\AppData\\\\Local\\\\Temp\\\\figma_modal1.png\" \"https://www.figma.com/api/mcp/asset/6a60f269-9070-4992-b07c-2f720f5a04d8\")",
+      "Bash(curl -s -o \"C:\\\\Users\\\\apekshaarde\\\\AppData\\\\Local\\\\Temp\\\\figma_modal2.png\" \"https://www.figma.com/api/mcp/asset/7a54d354-b07e-4805-b741-bd63cfaeea44\")",
+      "Bash(node -e ' *)"
+    ]
+  }
+}
