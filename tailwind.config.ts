@@ -14,6 +14,9 @@ const config: Config = {
             green: '#53A669',
             blue: '#0284C7',
           },
+          secondary: {
+            blue: '#91DAFF',
+          },
           text: {
             default: '#222329',
             white: '#FFFFFF',
@@ -25,6 +28,7 @@ const config: Config = {
             400: '#82868C',
             500: '#3A3C40',
             600: '#9B9B9B',
+            800: '#808080',
           },
           growth: '#00AE1D',
           loss: '#FF0004',

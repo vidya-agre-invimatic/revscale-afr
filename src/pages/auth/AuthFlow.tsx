@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { SignInLayout } from './SignInLayout'
 import { SignInPage } from './SignInPage'
 import { SignInLoading } from './SignInLoading'
@@ -64,6 +65,15 @@ function DummyDashboard() {
 // ---------------------------------------------------------------------------
 
 function CompleteScreen() {
+  const router = useRouter()
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push('/dashboard')
+    }, 2000)
+    return () => clearTimeout(timer)
+  }, [router])
+
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-white">
       <div className="text-center flex flex-col items-center gap-5">
