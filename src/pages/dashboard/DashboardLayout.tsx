@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { SidebarShell, Sidebar } from '@/design-system'
 import SettingsPage from './SettingsPage'
-import AgencyBreakdownPage from './AgencyBreakdownPage'
+import { AgencyBreakdownPage } from '@/pages/agency-breakdown/AgencyBreakdownPage'
 
 export default function DashboardLayout() {
   const [collapsed, setCollapsed] = useState(false)
