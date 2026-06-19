@@ -1,8 +1,9 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { ChevronDown, Calendar, Search, SlidersHorizontal } from 'lucide-react'
 import { FlowsTable } from '@/features/flows/components/FlowsTable'
+import { FlowBreakdownModal } from '@/features/flows/components/FlowBreakdownModal'
 import type { FlowRow } from '@/features/flows/types/flow.types'
 
 const MOCK_FLOWS: FlowRow[] = [
@@ -98,6 +99,8 @@ const MOCK_FLOWS: FlowRow[] = [
 ]
 
 export default function FlowsPage() {
+  const [selectedFlow, setSelectedFlow] = useState<FlowRow | null>(null)
+
   return (
     <div className="flex flex-col gap-5 p-8 min-h-full">
 
@@ -181,8 +184,10 @@ export default function FlowsPage() {
         </div>
 
         {/* Table */}
-        <FlowsTable rows={MOCK_FLOWS} />
+        <FlowsTable rows={MOCK_FLOWS} onFlowBreakdownClick={setSelectedFlow} />
       </div>
+
+      <FlowBreakdownModal flow={selectedFlow} onClose={() => setSelectedFlow(null)} />
     </div>
   )
 }
