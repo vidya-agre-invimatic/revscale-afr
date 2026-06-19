@@ -4,15 +4,18 @@ import React, { useState } from 'react'
 import { SidebarShell, Sidebar } from '@/design-system'
 import SettingsPage from './SettingsPage'
 import AgencyBreakdownPage from './AgencyBreakdownPage'
+import ClientOverviewPage from './ClientOverviewPage'
 
 export default function DashboardLayout() {
   const [collapsed, setCollapsed] = useState(false)
-  const [activeNav, setActiveNav] = useState('agency-breakdown')
+  const [activeNav, setActiveNav] = useState('client-overview')
 
   const renderPage = () => {
     switch (activeNav) {
       case 'agency-breakdown':
         return <AgencyBreakdownPage />
+      case 'client-overview':
+        return <ClientOverviewPage />
       case 'settings':
         return <SettingsPage />
       default:
