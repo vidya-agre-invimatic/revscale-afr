@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { SidebarShell, Sidebar } from '@/design-system'
 import SettingsPage from './SettingsPage'
 import AgencyBreakdownPage from './AgencyBreakdownPage'
+import FlowsPage from './FlowsPage'
 
 export default function DashboardLayout() {
   const [collapsed, setCollapsed] = useState(false)
@@ -13,6 +14,8 @@ export default function DashboardLayout() {
     switch (activeNav) {
       case 'agency-breakdown':
         return <AgencyBreakdownPage />
+      case 'flows':
+        return <FlowsPage />
       case 'settings':
         return <SettingsPage />
       default:
