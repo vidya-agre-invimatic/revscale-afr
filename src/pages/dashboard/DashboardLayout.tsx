@@ -5,10 +5,11 @@ import { SidebarShell, Sidebar } from '@/design-system'
 import SettingsPage from './SettingsPage'
 import AgencyBreakdownPage from './AgencyBreakdownPage'
 import FlowsPage from './FlowsPage'
+import ClientOverviewPage from './ClientOverviewPage'
 
 export default function DashboardLayout() {
   const [collapsed, setCollapsed] = useState(false)
-  const [activeNav, setActiveNav] = useState('agency-breakdown')
+  const [activeNav, setActiveNav] = useState('client-overview')
 
   const renderPage = () => {
     switch (activeNav) {
@@ -16,6 +17,8 @@ export default function DashboardLayout() {
         return <AgencyBreakdownPage />
       case 'flows':
         return <FlowsPage />
+      case 'client-overview':
+        return <ClientOverviewPage />
       case 'settings':
         return <SettingsPage />
       default:
