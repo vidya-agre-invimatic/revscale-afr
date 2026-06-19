@@ -3,7 +3,7 @@
 import React from 'react'
 import { useParams } from 'next/navigation'
 import ClientOverviewPage from '@/pages/dashboard/ClientOverviewPage'
-import AgencyBreakdownPage from '@/pages/dashboard/AgencyBreakdownPage'
+import { AgencyBreakdownPage } from '@/pages/agency-breakdown/AgencyBreakdownPage'
 import SettingsPage from '@/pages/dashboard/SettingsPage'
 
 const PAGES: Record<string, React.ComponentType> = {
